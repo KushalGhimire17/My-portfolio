@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body>
+    <h1>Portfolio</h1>
+    <div id="loading">
+      loading...
+    </div>
+    <!-- Git fetch -->
+    <div class="main" id="mainContainer" hidden>
+      <img id="profileImage" alt="profile" height="100" width="100" />
+      <h2 id="fullName"></h2>
+      <p id="bio"></p>
+      <h5 id="followersInformation"></h5>
+      <p>Check me on <a id="githubLink" target="_blank">Github</a></p>
+      <p><h2>List of my repositories</h2>
+          <a id="reposURL" target="_blank"></a>
+      </p>
+    </div>
+    <!-- <div id="reposURL"></div> -->
+    <!-- End of Git fetch -->
+    <!-- Twitter publish -->
+    <a
+      class="twitter-timeline"
+      data-width="300"
+      data-height="400"
+      href="https://twitter.com/kushalghimire62?ref_src=twsrc%5Etfw"
+      >Tweets by kushalghimire62</a
+    >
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
+    <!-- End of twitter publish -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
