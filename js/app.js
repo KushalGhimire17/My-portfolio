@@ -19,12 +19,20 @@ fetch('https://api.github.com/users/KushalGhimire17')
 fetch('https://api.github.com/users/KushalGhimire17/repos')
 .then(response => response.json())
 .then(function(response) {
+    // for(var index=0; index<response.length; index++) {
+    //     data = response[index];
+    //     console.log(data['html_url'])
+    //     document.getElementById('reposURL').href = data['html_url']
+    //     var pTag = document.createElement('p');
+    //     pTag.innerHTML = data['name'];
+    //     document.querySelector('#reposURL').appendChild(pTag);
+    // }
+
+    var htmlDiv = document.getElementById('repos');
     for(var index=0; index<response.length; index++) {
         data = response[index];
         console.log(data['html_url'])
-        document.getElementById('reposURL').href = data['html_url']
-        var pTag = document.createElement('p');
-        pTag.innerHTML = data['name'];
-        document.querySelector('#reposURL').appendChild(pTag);
+        var anchor = "<a style='font-size: 18px;' href='" + data['html_url'] + "' target='_blank'>" + data['name'] +"</a><br>";
+        htmlDiv.innerHTML+=anchor;
     }
 })
